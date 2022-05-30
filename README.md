@@ -4,3 +4,6 @@ This repository contains various projects completed throughout the Odin Project.
 
 ## Relevant Links
 
+| #   | Projects                                           | Live Demo                                                  |
+| --- | -------------------------------------------------- | ---------------------------------------------------------- |
+| 01  | [Rock Paper Scissor](../master/rock-paper-scissor) | [Link](https://rockpaperscissors-donhgyunsuh.netlify.app/) |
