@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital@1&family=Ms+Madi&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Ms Madi";
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefefe;
+}
+
+.background {
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    width: 700px;
+    border-radius: 1em;
+    box-shadow: 12px 12px 2px 1px #333;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    color: #ededed;
+    font-size: 60px;
+    top: 5px;
+    margin: 20px;
+}
+
+.container {
+    background-color: #fefefe;
+    /* box-shadow: inset 0px 0px 5px 3px rgb(0 0 0 / 71%); */
+    width: 450px;
+    height: 450px;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    display: inline-block;
+}
+
+.menu {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 35px;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
+
+.btn {
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 2px 2px 1px #ededed;
+    font-family: "Libre Bodoni";
+}
+
+#choice {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+#pixel {
+    position: absolute;
+    right: 0px;
+    left: 540px;
+    width: 200px;
+    transform: rotate(270deg);
+    accent-color: white
+}

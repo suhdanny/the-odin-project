@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Odin Sign-up Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left split">
+            <form id="form" action="/" method="GET">
+                <div class="welcome">
+                    <h1>Welcome home</h1>
+                    <p>Please enter your details to get started.</p>
+                </div>
+                <section>
+                    <div>
+                        <input type="text" id="firstname" placeholder=" " required>
+                        <label for="firstname">first name</label>
+                    </div>
+                    <div>
+                        <input type="text" id="lastname" placeholder=" " required>
+                        <label for="lastname">last name</label>
+                    </div>
+                    <div>
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">email</label>
+                    </div>
+                    <div>
+                        <input type="tel" id="phone" placeholder=" " required>
+                        <label for="phone">phone number</label>
+                    </div>
+                    <div>
+                        <input type="password" id="password" placeholder=" " required>
+                        <label for="password">password</label>
+                    </div>
+                    <div>
+                        <input type="password" id="confirm" placeholder=" " required>
+                        <label for="confirm">confirm password</label>
+                    </div>
+                    <div id="error">
+                        <div>* Passwords do not match</div>
+                    </div>
+                </section>
+
+                <button type="submit">Create Account</button>
+                <p class="login">Already have an account? <a href="">Log in</a></p>
+            </form>
+
+
+        </div>
+        <div class="right split">
+        </div>
+    </div>
+</body>
+</html>

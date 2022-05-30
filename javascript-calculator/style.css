@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --border: #333;
+    --btn: #eee;
+    --btn--hover: #ddd;
+    --btn-clear: #faa;
+    --btn-clear-hover: #e99;
+    --btn-delete: #99e;
+    --btn-delete-hover: #88d;
+}
+
+body {
+    font-family: Oswald, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 85px); /* 4 columns, all 100px wide */
+    grid-template-rows: minmax(120px, auto) repeat(5, 85px);
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: var(--border);
+    padding: 10px;
+    grid-gap: 10px;
+}
+
+.output {
+    border: 1px solid black;
+    border-radius: 10px;
+    grid-column: 1 / -1; /* all the way from first column to last column */
+    background-color: var(--btn);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word; /* words can be broken down in the middle, not just at the end of the line or after space */
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    font-size: 20px;
+}
+
+.output .current-operand {
+    font-size: 35px;
+}
+
+.calculator-grid > button {
+    font-size: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: var(--btn);
+}
+
+.calculator-grid > button:hover {
+    background-color: var(--btn--hover);
+}
+
+.span-two {
+    grid-column: span 2; /* columns to take 2 spaces */
+}
+
+button.clear {
+    background-color: var(--btn-clear);
+}
+
+button.clear:hover {
+    background-color: var(--btn-clear-hover);
+}
+
+button.delete {
+    background-color: var(--btn-delete);
+}
+
+button.delete:hover {
+    background-color: var(--btn-delete-hover);
+}
