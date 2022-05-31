@@ -2,6 +2,10 @@
 
 This is a simple sign-up form project that was part of [The Odin Project](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form) curriculum.
 
+## Demo
+
+![Alt Text](../master/project-demo-gifs/sign-up-form.gif)
+
 ## Reflection
 
 1. Learned how to make a split 50-50 landing page. I used relative and absolute positioning to achieve this.
