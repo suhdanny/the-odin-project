@@ -1,6 +1,8 @@
 # The Odin Project
 
-This repository contains various projects completed throughout the Odin Project. Below I provided a table which provides direct link to the project repository and also a live demo link. Each relevant link to repository also contains a screenshot of the live demo as well as the general description of the project.
+This repository contains various projects completed throughout the Odin Project.
+
+Below I provided a table which provides direct link to the project repository and also a live demo link. Each relevant link to repository also contains a screenshot of the live demo as well as the general description of the project.
 
 ## Relevant Links
 
