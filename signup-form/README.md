@@ -4,7 +4,7 @@ This is a simple sign-up form project that was part of [The Odin Project](https:
 
 ## Demo
 
-![]<img src="../project-demo-gif/sign-up-form.gif" width="250" height="250"/>
+![](project-demo/sign-up-form.gif)
 
 ## Reflection
 
