@@ -4,7 +4,7 @@ This is a simple sign-up form project that was part of [The Odin Project](https:
 
 ## Demo
 
-![](project-demo/sign-up-form.gif)
+<img width="1423" alt="Screen Shot 2022-05-30 at 8 24 22 PM" src="https://user-images.githubusercontent.com/79773846/171070848-dc243dcc-0a98-43aa-aed2-cdb481ab1f34.png">
 
 ## Reflection
 
