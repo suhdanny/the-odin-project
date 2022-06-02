@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --background: #f9fafb;
+    --very-light-orange: #ffedd5;
+    --medium-orange: #fdba74;
+    --light-green: #bbf7d0;
+    --light-blue: #bfdbfe;
+    --light-grey: #d1d5db;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Mulish, sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-color: var(--background);
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "sidebar header sub-content"
+        "sidebar main sub-content";
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.main {
+    grid-area: main;
+}
+
+.sub-content {
+    grid-area: sub-content;
+}
