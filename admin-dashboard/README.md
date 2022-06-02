@@ -4,6 +4,8 @@ This project aimed to implement a full dashboard design using HTML and CSS. The 
 
 # Demo
 
+<img width="1431" alt="Screen Shot 2022-06-02 at 4 39 55 PM" src="https://user-images.githubusercontent.com/79773846/171734156-bf615862-6894-425f-886b-723c252fc6d6.png">
+
 # Reflection
 
 1. I learned how to use CSS grid to make a general web-page layout. I specifically utilized `grid-template-areas` property on the grid container by referencing the names of grid areas that I defined on the grid items.
