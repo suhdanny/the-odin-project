@@ -22,7 +22,7 @@ body {
     overflow: hidden;
     background-color: var(--background);
     display: grid;
-    grid-template-columns: 250px 2.5fr 1fr;
+    grid-template-columns: 250px auto 300px;
     grid-template-rows: auto 1fr;
     grid-template-areas: 
         "sidebar header sub-content"
@@ -318,4 +318,68 @@ body {
     height: 90%;
     align-self: center;
     margin-right: 30px;
+}
+
+.sub-content .title {
+    font-weight: 600;
+    color: white;
+    font-size: 18px;
+}
+
+.sub-content .sales-stats {
+    margin-top: 30px;
+}
+
+.sub-content .sales-stats ul {
+    padding-left: 0;
+    list-style: none;
+    color: white;
+}
+
+.sub-content .sales-stats ul > li {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.sub-content .sales-stats ul li .icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--light-grey);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-content .sales-stats ul li .icon > img {
+    width: 25px;
+    height: 25px;
+}
+
+.sub-content .sales-stats ul li > div:nth-child(2) {
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--light-grey);
+}
+
+.sub-content .sales-stats ul li > div:nth-child(2) > span {
+    font-size: 20px;
+    color: white;
+}
+
+.sub-content .sub-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.sub-content .bar-chart {
+    background-image: url("images/bar-chart.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
 }
