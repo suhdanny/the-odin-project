@@ -312,4 +312,10 @@ body {
 
 .sub-content {
     grid-area: sub-content;
+    padding: 30px;
+    background: black;
+    border-radius: 30px;
+    height: 90%;
+    align-self: center;
+    margin-right: 30px;
 }
