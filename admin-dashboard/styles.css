@@ -3,8 +3,9 @@
 :root {
     --background: white;
     --border-grey: rgba(0, 0, 0, 0.5);
-    --very-light-orange: #ffedd5;
-    --medium-orange: #fdba74;
+    --very-light-orange: #ebe7d6;
+    --icon-background-orange: #d9d2b3;
+    --medium-orange: #ffedd5;
     --light-green: #bbf7d0;
     --light-blue: #bfdbfe;
     --light-grey: #d1d5db;
@@ -18,9 +19,10 @@ body {
     font-family: Mulish, sans-serif;
     margin: 0;
     height: 100vh;
+    overflow: hidden;
     background-color: var(--background);
     display: grid;
-    grid-template-columns: 250px 3fr 1fr;
+    grid-template-columns: 250px 2.5fr 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: 
         "sidebar header sub-content"
@@ -28,10 +30,19 @@ body {
 }
 
 .sidebar {
-    border-right: 1px solid var(--border-grey);
     grid-area: sidebar;
     padding: 30px;
+    position: relative;
 }
+
+/* .sidebar::after {
+    content: "";
+    background: black;
+    position: absolute;
+    right: 0;
+    height: 95%;
+    width: 3px;
+} */
 
 .sidebar .sidebar-logo img{
     width: 40px;
@@ -69,7 +80,7 @@ body {
 
 .search {
     height: 40px;
-    width: 500px;
+    width: 70%;
     position: relative;
     margin-left: 20px;
 }
@@ -82,7 +93,7 @@ body {
     border-radius: 10px;
     border: 1px var(--border-grey) solid;
     font-size: 16px;
-    padding-left: 40px;
+    padding-left: 50px;
 }
 
 .search input:focus {
@@ -102,6 +113,188 @@ body {
 
 .main {
     grid-area: main;
+    padding: 20px 30px 30px 30px;
+    overflow: auto;
+}
+
+.main .heading {
+    margin-left: 20px;
+    font-size: 16px;
+    color: var(--border-grey);
+    line-height: 30px;
+}
+
+.heading span {
+    font-weight: 700;
+    font-size: 30px;
+    color: black;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 250px 200px 200px;
+    grid-template-areas: 
+        "stats stats"
+        "sales profit"
+        "orders visits";
+    gap: 30px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.main-container .stats {
+    grid-area: stats;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--very-light-orange);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.stats .card .icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--icon-background-orange);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.stats .card .icon > img {
+    width: 25px;
+    height: 25px;
+}
+
+.stats .card .metric {
+    margin-top: 25px;
+    font-size: 16px;
+    color: var(--border-grey);
+    line-height: 35px;
+}
+
+.stats .card .metric span {
+    font-weight: 700;
+    font-size: 35px;
+    color: black;
+}
+
+.main-container .sub-card {
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-card .description div {
+    font-size: 16px;
+    color: var(--border-grey);
+    line-height: 35px;
+}
+
+.sub-card .description div span {
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+}
+
+.sub-card .percent {
+    position: relative;
+    width: 110px;
+    height: 110px;
+}
+
+.sub-card .percent svg {
+    position: relative;
+    width: 110px;
+    height: 110px;
+}
+
+.sub-card .percent svg circle {
+    width: 110px;
+    height: 110px;
+    fill: none; /* filling in the color for SVG*/
+    stroke-width: 7; /* width of a border of SVG*/
+    stroke: #000;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 320;
+    stroke-dashoffset: 320;
+}
+
+.sub-card .percent .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+
+.sub-card.sales .percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: var(--medium-orange);
+}
+  
+.sub-card.sales .percent svg circle:nth-child(2) {
+    stroke-dashoffset: calc(320 - (320 * 55) / 100);
+    stroke: #000;
+}
+
+.sub-card.profit .percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: var(--light-green);
+}
+  
+.sub-card.profit .percent svg circle:nth-child(2) {
+    stroke-dashoffset: calc(320 - (320 * 30) / 100);
+    stroke: #000;
+}
+
+.sub-card.orders .percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: var(--light-blue);
+}
+  
+.sub-card.orders .percent svg circle:nth-child(2) {
+    stroke-dashoffset: calc(320 - (320 * 80) / 100);
+    stroke: #000;
+}
+
+.sub-card.visits .percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: var(--light-grey);
+}
+  
+.sub-card.visits .percent svg circle:nth-child(2) {
+    stroke-dashoffset: calc(320 - (320 * 70) / 100);
+    stroke: #000;
+}
+
+.main-container .sales {
+    grid-area: sales;
+    background-color: var(--medium-orange);
+}
+
+.main-container .profit {
+    grid-area: profit;
+    background-color: var(--light-green);
+}
+
+.main-container .orders {
+    grid-area: orders;
+    background-color: var(--light-blue);
+}
+
+.main-container .visits {
+    grid-area: visits;
+    background-color: var(--light-grey);
 }
 
 .sub-content {

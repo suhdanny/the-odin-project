@@ -10,7 +10,7 @@
 <body>
     <div class="header">
         <div class="search">
-            <input type="text" id="search" name="search">
+            <input type="text" id="search" name="search" placeholder="Search for stats ... ">
             <label for="search">
                 <img src="images/magnify.png" alt="">
             </label>
@@ -51,48 +51,86 @@
 
     <div class="main">
         <div class="heading">
-            <div>Hello David<br>
-                Welcome Back!
+            <div><span>Hello Donghyun</span><br>
+                Welcome Back !
             </div>
         </div>
         <div class="main-container">
             <div class="stats">
-                <div class="views">
-                    <img src="images/eye-outline.png" alt="">
-                    <div>Views <br><span>500</span><br> Per Day</div>
+                <div class="card views">
+                    <div class="icon">
+                        <img src="images/eye-outline.png" alt="">
+                    </div>
+                    <div class="metric">Views<br><span>500</span><br>Per Day</div>
                 </div>
-                <div class="visits">
-                    <img src="images/apple-safari.png" alt="">
-                    <div>Visits <br><span>2000</span><br> Per Minutes</div>
+                <div class="card visit">
+                    <div class="icon">
+                        <img src="images/apple-safari.png" alt="">
+                    </div>
+                    <div class="metric">Visits<br><span>2000</span><br>Per Minutes</div>
                 </div>
-                <div class="orders">
-                    <img src="images/storefront-outline.png" alt="">
-                    <div>Orders <br><span>5100</span><br> Per Day</div>
+                <div class="card order">
+                    <div class="icon">
+                        <img src="images/storefront-outline.png" alt="">
+                    </div>
+                    <div class="metric">Orders<br><span>5100</span><br>Per Day</div>
                 </div>
             </div>
-            <div class="sales">
+            <div class="sub-card sales">
                 <div class="description">
-                    <div>Sales<br><span>Total Sales Today</span><br>$500</div>
+                    <div><span>Sales</span><br>Total Sales Today<br><span>$500</span></div>
                 </div>
-                <div class="percentage-bar"></div>
+                <div class="percent">
+                    <svg>
+                        <circle cx="50" cy="50" r="50"></circle>
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg>
+                    <div class="number">
+                        <h2>55<span>%</span></h2>
+                    </div>
+                </div>
             </div>
-            <div class="profit">
+            <div class="sub-card profit">
                 <div class="description">
-                    <div>Profit<br><span>Per Day Ratio</span><br>$150</div>
+                    <div><span>Profit</span><br>Per day ratio<br><span>$150</span></div>
                 </div>
-                <div class="percentage-bar"></div>
+                <div class="percent">
+                    <svg>
+                        <circle cx="50" cy="50" r="50"></circle>
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg>
+                    <div class="number">
+                        <h2>30<span>%</span></h2>
+                    </div>
+                </div>
             </div>
-            <div class="orders">
+            <div class="sub-card orders">
                 <div class="description">
-                    <div>Orders<br><span>Total Order Today</span><br>1000</div>
+                    <div><span>Orders</span><br>Total Order Today<br><span>1000</span></div>
                 </div>
-                <div class="percentage-bar"></div>
+                <div class="percent">
+                    <svg>
+                        <circle cx="50" cy="50" r="50"></circle>
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg>
+                    <div class="number">
+                        <h2>80<span>%</span></h2>
+                    </div>
+                </div>
             </div>
-            <div class="visits">
+            <div class="sub-card visits">
                 <div class="description">
-                    <div>Visits<br><span>Total Visit Today</span><br>400</div>
+                    <div><span>Visits</span><br>Total Visit Today<br><span>400</span></div>
                 </div>
-                <div class="percentage-bar"></div>
+                <div class="percent">
+                    <svg>
+                        <circle cx="50" cy="50" r="50"></circle>
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg>
+                    <div class="number">
+                        <h2>70<span>%</span></h2>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
