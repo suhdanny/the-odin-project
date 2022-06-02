@@ -1,6 +1,6 @@
 # Rock Paper Scissor
 
-This project is a simple implementation of Rock Paper Scissors using HTML, CSS and JavaScript.
+This project is a simple implementation of Rock Paper Scissors using HTML, CSS and JavaScript. You can find the project description [here](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors).
 
 ## [Demo](https://rockpaperscissors-donhgyunsuh.netlify.app/)
 
