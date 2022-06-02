@@ -2,7 +2,7 @@
 
 This project aimed to implement a full dashboard design using HTML and CSS. The detailed project description can be found [here](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard).
 
-# Demo
+# [Demo](https://admindashboard-donghyunsuh.netlify.app/)
 
 <img width="1431" alt="Screen Shot 2022-06-02 at 4 39 55 PM" src="https://user-images.githubusercontent.com/79773846/171734156-bf615862-6894-425f-886b-723c252fc6d6.png">
 
