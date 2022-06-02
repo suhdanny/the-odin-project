@@ -2,6 +2,7 @@
 
 :root {
     --background: white;
+    --border-grey: rgba(0, 0, 0, 0.5);
     --very-light-orange: #ffedd5;
     --medium-orange: #fdba74;
     --light-green: #bbf7d0;
@@ -19,7 +20,7 @@ body {
     height: 100vh;
     background-color: var(--background);
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 250px 3fr 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: 
         "sidebar header sub-content"
@@ -27,7 +28,7 @@ body {
 }
 
 .sidebar {
-    border-right: 2px solid black;
+    border-right: 1px solid var(--border-grey);
     grid-area: sidebar;
     padding: 30px;
 }
@@ -61,9 +62,42 @@ body {
     color: black;
 }
 
-
 .header {
     grid-area: header;
+    padding: 30px;
+}
+
+.search {
+    height: 40px;
+    width: 500px;
+    position: relative;
+    margin-left: 20px;
+}
+
+.search input {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px var(--border-grey) solid;
+    font-size: 16px;
+    padding-left: 40px;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search label {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+}
+
+.search label img {
+    width: 30px;
+    height: 30px;
 }
 
 .main {
