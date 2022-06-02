@@ -12,3 +12,4 @@ Below I provided a table which provides direct link to the project repository an
 | 02  | [Etch-A-Sketch](../master/etch-a-sketch)           | [Link](https://etchaskecth-donghyunsuh.netlify.app/)          |
 | 03  | [Calculator](../master/javascript-calculator)      | [Link](https://javascriptcalculator-donghyunsuh.netlify.app/) |
 | 04  | [Sign-up Form](../master/signup-form)              | [Link](https://signupform-donghyunsuh.netlify.app/)           |
+| 05  | [Admin Dashboard](../master/admin-dashboard)       | [Link](https://admindashboard-donghyunsuh.netlify.app/)       |
