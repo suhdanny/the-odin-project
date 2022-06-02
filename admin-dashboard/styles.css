@@ -33,16 +33,8 @@ body {
     grid-area: sidebar;
     padding: 30px;
     position: relative;
+    border-right: 2px solid var(--border-grey);
 }
-
-/* .sidebar::after {
-    content: "";
-    background: black;
-    position: absolute;
-    right: 0;
-    height: 95%;
-    width: 3px;
-} */
 
 .sidebar .sidebar-logo img{
     width: 40px;
