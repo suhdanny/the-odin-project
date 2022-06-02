@@ -187,6 +187,19 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.sub-card .arrow {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 15px;
+    right: 15px;
+}
+
+.arrow.up {
+    transform: rotate(-90deg);
 }
 
 .sub-card .description div {
