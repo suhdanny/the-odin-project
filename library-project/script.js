@@ -2,8 +2,6 @@ const openModalButton = document.querySelector('[data-modal-target]');
 const closeModalButton = document.querySelector('[data-close-button]');
 const modalForm = document.querySelector('form');
 const overlay = document.getElementById('overlay');
-// const readButtons = document.querySelectorAll('.book-card .read-btn');
-// const removeButtons = document.querySelectorAll('.book-card .remove-btn');
 const bookContainer = document.querySelector('.book-container');
 
 // Implement Modal Functionality
@@ -26,21 +24,20 @@ function Book(title, author, page, isRead) {
 
 modalForm.addEventListener('submit', (e) => {
     e.preventDefault();
-
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const page = document.getElementById('page').value;
     const cb = document.getElementById('read');
     let isRead;
     (cb.checked) ? isRead = true : isRead = false;
-
     const newBook = new Book(title, author, page, isRead);
-
     addBookToLibrary(newBook);
     modalForm.reset();
     const modal = closeModalButton.closest('.modal');
     closeModal(modal);
 })
+
+// Adding new books to the library
 
 function addBookToLibrary(newBook) {
     const bookCard = document.createElement('div')
@@ -74,6 +71,8 @@ function addBookToLibrary(newBook) {
     bookCard.append(titleElement, authorElement, pageElement, isReadButton, removeButton);
     bookContainer.append(bookCard);
 }
+
+// Implement Opening and Closing Modal
 
 function openModal(modal) {
     if (modal == null) return;
