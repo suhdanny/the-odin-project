@@ -8,8 +8,10 @@ The app supports:
 - Removing books from your library.
 - Changing the read status to not-read with a button click
 
-## [Demo]()
+## [Demo](https://library-project-donghyunsuh.netlify.app/)
 
 ## Reflection
 
-1.
+1. Used Object and Object Constructors to store user input, and manipulated the DOM to add book elements
+2. Add events to buttons on each book's display where users can change their read status and also remove the book from the library
+3. Created a modal which is prompted when users click the add book button, and also change the overlay accordingly when the modals open and close
