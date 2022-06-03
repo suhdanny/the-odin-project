@@ -10,6 +10,8 @@ The app supports:
 
 ## [Demo](https://library-project-donghyunsuh.netlify.app/)
 
+<img width="1424" alt="Screen Shot 2022-06-03 at 5 39 26 PM" src="https://user-images.githubusercontent.com/79773846/171957380-d0f04096-1ebd-4a07-af57-648cc03b19a3.png">
+
 ## Reflection
 
 1. Used Object and Object Constructors to store user input, and manipulated the DOM to add book elements
