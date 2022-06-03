@@ -13,16 +13,36 @@
         <h1>The Midnight Library</h1>
     </div>
     <div class="main">
-        <button class="btn btn-add">+ Add Book</button>
+        <button data-modal-target="#modal" class="btn btn-add">+ Add Your Book</button>
         <div class="book-container">
-            <div class="book-card">
+            <!-- <div class="book-card">
                 <div class="title">The Midnight Library</div>
                 <div class="author">Matt Haig</div>
                 <div class="page">288 Pages</div>
-                <button class="btn read">Read</button>
-                <button class="btn remove">Remove</button>
-            </div>
+                <button class="btn read-btn read">Read</button>
+                <button class="btn remove-btn remove">Remove</button>
+            </div> -->
         </div>
     </div>
+    <div class="modal" id="modal">
+        <form action="">
+            <h3>Add New Book</h3>
+            <div>
+                <input type="text" id="title" placeholder="Title" required>
+            </div>
+            <div>
+                <input type="text" id="author" placeholder="Author" required>
+            </div>
+            <div>
+                <input type="number" id="page" placeholder = "Pages" required>
+            </div>
+            <div class="checkbox">
+                <label for="read">Have you read it?</label>
+                <input type="checkbox" id="read">
+            </div>
+            <button data-close-button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="overlay"></div>
 </body>
 </html>
