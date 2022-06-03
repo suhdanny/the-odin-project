@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+    --white: #fffbfb;
+    --grey: #f0eef1;
+    --btn-hover: #cacacb;
+    --black: #050505;
+    --red: #ff7070;
+    --light-green: #9fff9c;
+    --light-red: #ff9c9c;
+    --border-radius: 10px;
+    --btn-padding: 10px;
+    --shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    background-color: var(--grey);
+}
+
+.header {
+    background-image: url("images/stars.jpg");
+    padding: 30px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.header h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.main .btn-add {
+    font-family: inherit;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius);
+    transition: transform 0.1s linear;
+}
+
+.main .btn-add:hover {
+    filter: brightness(70%);
+    transform: scale(1.05);
+}
+
+.book-container {
+    width: 1250px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.book-card {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 25px;
+    font-weight: 500;
+    background-color: white;
+    border-radius: var(--border-radius);
+    gap: 20px;
+    box-shadow: var(--shadow);
+}
+
+.book-card .btn {
+    font-family: inherit;
+    width: 80%;
+    padding: 15px;
+    font-size: 25px;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    font-weight: inherit;
+}
+
+.book-card .btn:hover {
+    background-color: var(--btn-hover);
+    filter: brightness(90%);
+}
+
+.book-card .btn.read {
+    background-color: var(--light-green);
+}
+
+.book-card .btn.not-read {
+    background-color: var(--red);
+}
+
+.book-card .btn.remove {
+    background-color: var(--grey);
+}
