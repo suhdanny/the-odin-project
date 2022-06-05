@@ -1,5 +1,5 @@
 // Module Pattern to make gameBoard
-let gameBoard = (function(player1, player2) {
+let gameBoard = (function() {
     const cellElements = document.querySelectorAll('[data-cell]');
     const message = document.querySelector('.message');
     const X_CLASS = 'x';
