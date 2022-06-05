@@ -13,4 +13,4 @@ Below I provided a table which provides direct link to the project repository an
 | 03  | [Calculator](../master/javascript-calculator)      | [Link](https://javascriptcalculator-donghyunsuh.netlify.app/) |
 | 04  | [Sign-up Form](../master/signup-form)              | [Link](https://signupform-donghyunsuh.netlify.app/)           |
 | 05  | [Admin Dashboard](../master/admin-dashboard)       | [Link](https://admindashboard-donghyunsuh.netlify.app/)       |
-| 05  | [Library](../master/library-project)               | [Link](https://library-project-donghyunsuh.netlify.app/)      |
+| 06  | [Library](../master/library-project)               | [Link](https://library-project-donghyunsuh.netlify.app/)      |
