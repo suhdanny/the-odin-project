@@ -1,21 +1,12 @@
-const cellElements = document.querySelectorAll('[data-cell]');
-const restartButton = document.querySelector('.btn');
-
-// Factory Function to make Player
-const Player = (marker) => {
-    const getMarker = () => marker;
-    return {getMarker};
-}
-
-// Initialize two players
-const PlayerX = Player('x');
-const PlayerO = Player('o');
-
 // Module Pattern to make gameBoard
 let gameBoard = (function(player1, player2) {
-    let currentMarker = player1.getMarker();
+    const cellElements = document.querySelectorAll('[data-cell]');
     const message = document.querySelector('.message');
+    const X_CLASS = 'x';
+    const O_CLASS = 'o';
+    let circleTurn;
     let gameOver;
+
     const WinningCombinations = [
         [0, 1, 2], 
         [3, 4, 5], 
@@ -26,27 +17,40 @@ let gameBoard = (function(player1, player2) {
         [0, 4, 8],
         [2, 4, 6]
     ];
+    
+    const startGame = () => {
+        circleTurn = false;
+        if (gameOver) {
+            gameOver = !gameOver;
+        }
+        cellElements.forEach(cell => {
+            cell.classList.remove(X_CLASS);
+            cell.classList.remove(O_CLASS);
+
+            cell.removeEventListener('click', handleClick);
+            cell.addEventListener('click', handleClick, { once : true });
+            message.innerText = "Player X's Turn";
+        })
+    }
 
     const swapTurns = () => {
-        if (currentMarker == player1.getMarker()) {
-            currentMarker = player2.getMarker();
-        } else {
-            currentMarker = player1.getMarker();
-        }
+        circleTurn = !circleTurn;
     }
 
-    const placeMark = (cell) => {
-        cell.classList.add(currentMarker);
+    const placeMark = (currentCell, currentClass) => {
+        currentCell.classList.add(currentClass);
     }
 
-    const changeMessage = (message) => {
-        (currentMarker == 'x') ? message.innerText = "Player X's Turn" : message.innerText = "Player O's Turn";
+    const changeMessage = (currentClass) => {
+        // (currentMarker == 'x') ? message.innerText = "Player X's Turn" : message.innerText = "Player O's Turn";
+        (currentClass == 'x') ? message.innerText = "Player O's Turn" : message.innerText = "Player X's Turn";
+
     }
 
-    const checkWin = (currentMarker) => {
+    const checkWin = (currentClass) => {
         return WinningCombinations.some(combination => {
             return combination.every(index => {
-                return cellElements[index].classList.contains(currentMarker);
+                return cellElements[index].classList.contains(currentClass);
             })
         })
     }
@@ -57,40 +61,41 @@ let gameBoard = (function(player1, player2) {
         })
     }
 
-    const endGame = (draw) => {
+    const endGame = (draw, currentClass) => {
         if (draw) {
             message.innerText = "It's a draw!";
             gameOver = !gameOver;
         } else {
-            message.innerText = `Player ${currentMarker.toUpperCase()} has won!`;
+            message.innerText = `Player ${currentClass.toUpperCase()} has won!`;
             gameOver = !gameOver;
         }
     }
 
     const handleClick = (e) => {
         const currentCell = e.target;
+        const currentClass = circleTurn ? O_CLASS : X_CLASS;
 
         if (gameOver) return;
 
-        placeMark(currentCell);
+        placeMark(currentCell, currentClass);
 
-        if (checkWin(currentMarker)) {
-            endGame(false);
+        if (checkWin(currentClass)) {
+            endGame(false, currentClass);
         } else if (isDraw()) {
             endGame(true);
         } else {
             swapTurns();
-            changeMessage(message);
+            changeMessage(currentClass);
         }
     }
 
-    return {handleClick}
+    return {handleClick, startGame}
 
-})(PlayerX, PlayerO);
+})();
 
-// Add EventListener to each squares 
-cellElements.forEach(cell => {
-    cell.addEventListener('click', (e) => {
-        gameBoard.handleClick(e);
-    }, { once : true })
-})
+gameBoard.startGame();
+
+// Add EventListener to restartButton
+const restartButton = document.querySelector('.btn');
+
+restartButton.addEventListener('click', gameBoard.startGame);
