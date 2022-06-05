@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.header {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    color: white;
+    margin: 0;
+    font-size: 70px;
+}
+
+.message {
+    color: white;
+    font-size: 25px;
+}
+
+.gameboard {
+    display: grid;
+    grid-template: repeat(3, 200px) / repeat(3, 200px);
+}
+
+.square {
+    border: 5px solid white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.square:first-child,
+.square:nth-child(2),
+.square:nth-child(3) {
+    border-top: none;
+}
+
+.square:nth-of-type(3n + 1) {
+    border-left: none;
+}
+
+.square:nth-of-type(3n + 3) {
+    border-right: none;
+}
+
+.square:last-child,
+.square:nth-child(7),
+.square:nth-child(8) {
+    border-bottom: none;
+}
+
+.square.x::before,
+.square.x::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 20px;
+    height: 180px;
+}
+
+.square.x::before {
+    transform: rotate(45deg);
+}
+
+.square.x::after {
+    transform: rotate(-45deg);
+}
+
+.square.o::before,
+.square.o::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.square.o::before {
+    background-color: white;
+    width: 170px;
+    height: 170px;
+}
+
+.square.o::after {
+    background-color: black;
+    width: calc(170px * 0.75);
+    height: calc(170px * 0.75);
+}
+
+.btn {
+    width: 20%;
+    padding: 25px;
+    font-family: inherit;
+    font-size: 28px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(0.8);
+}
