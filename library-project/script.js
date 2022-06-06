@@ -15,11 +15,13 @@ overlay.addEventListener('click', () => {
     closeModal(modal);
 })
 
-function Book(title, author, page, isRead) {
-    this.title = title;
-    this.author = author;
-    this.page = page;
-    this.isRead = isRead;
+class Book {
+    constructor(title, author, page, isRead) {
+        this.title = title;
+        this.author = author;
+        this.page = page;
+        this.isRead = isRead;
+    }
 }
 
 modalForm.addEventListener('submit', (e) => {
