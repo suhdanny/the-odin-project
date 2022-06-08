@@ -11,6 +11,8 @@
     padding: 0;
 }
 
+/* Style for Home Page */
+
 #home {
     height: 100vh;
 }
@@ -128,3 +130,5 @@ ul > li:hover::after {
 .order-link:hover {
     filter: brightness(0.8);
 }
+
+/* Style for Menu Page */
