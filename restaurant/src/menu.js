@@ -1,20 +1,18 @@
 import { makeHeader } from "./home";
 
-function loadHome() {
-    const menu = document.createElement('div');
-    menu.id = 'menu';
-
-    const header = makeHeader();
-
+function loadMenu() {
     const menuMain = document.createElement('div');
     menuMain.classList.add('menu-main');
 
-    const h1 = document.createElement('h1');
-    h1.innerText = 'All Day Menus';
-    menuMain.append(h1);
+    const menuContainer = document.createElement('div');
+    menuContainer.classList.add('menu-container');
+
+    const h2 = document.createElement('h2');
+    h2.innerText = 'Nigiri & Sashimi';
+    menuContainer.appendChild(h2);
 
     const gridContainer = document.createElement('div');
-    gridContainer.classList.add('grid-container');
+    gridContainer.classList.add('card-container');
 
     // append ten menu items
     
@@ -48,7 +46,7 @@ function loadHome() {
     gridContainer.appendChild(
         makeMenuCard(
             'Hamachi',
-            'Yellowtail (Japan)',
+            'Yellowtail. (Japan)',
             '11',
             'images/hamachi.webp'
         )
@@ -108,9 +106,10 @@ function loadHome() {
         )
     );
     
-    menu.append(header, gridContainer);
-
-    return menu;
+    menuContainer.appendChild(gridContainer);
+    menuMain.appendChild(menuContainer);
+    
+    return menuMain;
 }
 
 function makeMenuCard(menu, description, price, source) {
@@ -120,9 +119,9 @@ function makeMenuCard(menu, description, price, source) {
     const cardDescription = document.createElement('div');
     cardDescription.classList.add('card-description');
     cardDescription.innerHTML = `
-    <div>${menu}</div>
+    <div class="menu-name">${menu}</div>
     <div>${description}</div>
-    <div>$${price}</div>`
+    <div class="price">$${price}</div>`
 
     const img = document.createElement('img');
     img.src = source;
@@ -132,4 +131,4 @@ function makeMenuCard(menu, description, price, source) {
 }
 
 
-export default loadHome;
+export default loadMenu;

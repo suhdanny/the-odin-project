@@ -12,13 +12,8 @@
 }
 
 /* Style for Home Page */
-
-#home {
-    height: 100vh;
-}
-
 .header {
-    height: 25%;
+    height: 25vh;
     background-color: rgb(24, 24, 24);
     color: white;
     display: flex;
@@ -81,7 +76,7 @@ ul > li:hover::after {
 }
 
 .main {
-    height: 75%;
+    height: 75vh;
     background-image: url("images/home_background.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -132,3 +127,57 @@ ul > li:hover::after {
 }
 
 /* Style for Menu Page */
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.menu-container h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 550px);
+    grid-template-rows: repeat(5, 250px);
+    gap: 30px;
+}
+
+.menu-card {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.menu-card:hover {
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.menu-card .card-description {
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-description .menu-name {
+    font-weight: 600;
+}
+
+.card-description .price {
+    margin-top: auto;
+}
+
+.menu-card img {
+    margin-left: auto;
+    width: 250px;
+    height: 250px;
+}

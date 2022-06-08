@@ -1,9 +1,4 @@
 function loadHome() {
-    const home = document.createElement('div');
-    home.id = 'home';
-    
-    const header = makeHeader();
-
     const main = document.createElement('div');
     main.classList.add('main');
     const title = document.createElement('div');
@@ -22,8 +17,7 @@ function loadHome() {
     title.append(h2, p, orderLink);
     main.appendChild(title);
 
-    home.append(header, main);
-    return home;
+    return main;
 }
 
 function makeHeader() {
@@ -48,6 +42,7 @@ function makeHeader() {
     for (const tab of navArr) {
         const li = document.createElement('li');
         li.innerHTML = tab;
+        li.classList.add('tab');
         ul.appendChild(li);
     }
 
