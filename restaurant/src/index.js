@@ -1,5 +1,6 @@
 import {loadHome, makeHeader} from './home.js';
 import loadMenu from './menu.js';
+import loadContact from './contact.js';
 
 function initialize() {
     const contentElement = document.getElementById('content');
@@ -22,8 +23,10 @@ function addTabEvent(contentElement) {
                     contentElement.append(loadMenu());
                     break;
                 case "Contact Us":
-                    // resetTab();
-                    // contentElement.append(loadContact());
+                    console.log(e.target.innerText);
+                    resetTab(contentElement);
+                    contentElement.append(loadContact());
+                    break;
                 default:
                     return;
             }
@@ -32,7 +35,6 @@ function addTabEvent(contentElement) {
 }
 
 function resetTab(contentElement) {
-    console.log(contentElement.lastElementChild);
     contentElement.removeChild(contentElement.lastElementChild);
 }
 

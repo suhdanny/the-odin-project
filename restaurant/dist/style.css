@@ -181,3 +181,131 @@ ul > li:hover::after {
     width: 250px;
     height: 250px;
 }
+
+/* Style for Contact Page */
+.contact {
+    height: 75vh;
+    background-color: rgb(24, 24, 24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+#map {
+    width: 600px;
+    height: 550px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-info h1 {
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+}
+
+.contact-info > p {
+    font-size: 30px;
+    color: white;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 225px);
+    grid-template-rows: repeat(6, 60px);
+    grid-template-areas: 
+    "name name"
+    "email phone"
+    "subject subject"
+    "message message"
+    "message message"
+    "button button";
+    gap: 20px;
+}
+
+form div:nth-child(1) {
+    /* name */
+    grid-area: name;
+}
+
+form div:nth-child(2) {
+    grid-area: email;
+}
+
+form div:nth-child(3) {
+    grid-area: phone;
+}
+
+form div:nth-child(4) {
+    grid-area: subject;
+}
+
+form div:nth-child(5) {
+    grid-area: message;
+}
+
+form div:nth-child(6) {
+    grid-area: button;
+    justify-self: center;
+}
+
+form > div > input, form div textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 100%;
+    width: 100%;
+    font-size: 25px;
+    font-family: inherit;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid white;
+    background-color: rgb(24, 24, 24);
+    color: white;
+}
+
+form .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    padding: 25px;
+}
+
+.btn:hover {
+    filter: brightness(0.7);
+}
+
+.btn a {
+    font-family: inherit;
+    font-size: 25px;
+}
+
+form > div {
+    position: relative;
+}
+
+form > div > label {
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    font-size: 25px;
+    opacity: 0.4;
+}
+
+form > div textarea {
+    resize: none;
+    padding-top: 10px;
+}
+
+input:focus + label, input:not(:placeholder-shown) + label,
+textarea:focus + label, textarea:not(:placeholder-shown) + label {
+    opacity: 0;
+}
