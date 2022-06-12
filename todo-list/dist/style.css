@@ -33,7 +33,7 @@ body {
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     border-radius: 10px;
-    z-index: 1;
+    z-index: 10;
     display: grid;
     width: 550px;
     height: 350px;
@@ -267,20 +267,6 @@ input[type="text"]:focus {
     transform: scaleX(1);
 }
 
-
-.project-container .project-list {
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.project-container .project-list > .project {
-    list-style-type: none;
-    font-size: 25px;
-    font-weight: 300;
-}
-
 .menu .btn-add {
     border: none;
     font-size: 30px;
@@ -330,7 +316,7 @@ input[type="text"]:focus {
 
 .priority {
     text-align: center;
-    width: 85px;
+    width: 100px;
     padding: 8px;
     border-radius: 10px;
     color: white;
@@ -358,4 +344,5 @@ input[type="text"]:focus {
 .bin-icon {
     width: 40px;
     height: 40px;
+    cursor: pointer;
 }

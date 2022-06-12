@@ -9,7 +9,6 @@
 </head>
 <body>
     <div id="content">
-        <div id="overlay" class=""></div>
         <div class="header">
             <h1>TO-DO</h1>
             <img src="images/book-open-page-variant-outline.png" class="icon" alt="">
@@ -17,13 +16,8 @@
         <div class="menu">
             <ul class="menu-container">
                 <li class="tab click">Home</li>
-                <li class="tab">Project</li>
-                <div class="project-container">
-                    <ul class="project-list">
-                        <!-- <li class="project">Project 1</li> -->
-                    </ul>
-                </div>
-                <li class="tab click">Notes</li>
+                <!-- <li class="tab click">Project</li>
+                <li class="tab click">Notes</li> -->
             </ul>
             <button class="btn-add">+</button>
         </div>
@@ -31,7 +25,6 @@
             <!-- <div class="todo">
                 <div class="complete">
                     <input type="checkbox" id="check">
-                    <span class="checkmark"></span>
                 </div>
                 <div class="title">TOP: To-DO List</div>
                 <div class="priority medium">medium</div>
@@ -49,8 +42,8 @@
         <div class="modal-menu">
             <ul>
                <li>TO DO</li>
-               <li>Project</li>
-               <li>Note</li> 
+               <!-- <li>Project</li>
+               <li>Note</li>  -->
             </ul>
         </div>
         <div class="modal-input">
@@ -64,17 +57,18 @@
                 </div>
                 <div class="priority-input">
                     <span>Priority: </span>
-                    <input type="radio" id="high" name="priority">
+                    <input type="radio" id="high" name="priority" value="high">
                     <label for="high">high</label>
-                    <input type="radio" id="medium" name="priority">
+                    <input type="radio" id="medium" name="priority" value="medium">
                     <label for="medium">medium</label>
-                    <input type="radio" id="low" name="priority">
+                    <input type="radio" id="low" name="priority" value="low">
                     <label for="low">low</label>
                 </div>
-                <button class="btn-add-todo">Add</button>
+                <button type="submit" class="btn-add-todo">Add</button>
             </form>
         </div>
     </div>
+    <div id="overlay" class=""></div>
     <script src="main.js"></script>
 </body>
 </html>
