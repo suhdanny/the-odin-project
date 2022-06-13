@@ -28,23 +28,6 @@ function closeModal(modal) {
     overlay.classList.remove('active');
 }
 
-tabs.forEach(tab => {
-    tab.addEventListener('click', (e) => {
-        switch (e.target.innerText) {
-            case ("Home"):
-                toDoManager.renderHome(main);
-                break
-            case ("Project"):
-                break
-            case ("Notes"):
-                break
-            default:
-                return;
-        }
-    })
-})
-
-
 toDoForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const toDoInput = getInputData();

@@ -48,7 +48,6 @@ function createInput(type, id) {
 function addRemoveEvent(bin, toDo) {
     bin.addEventListener('click', () => {
         bin.parentElement.remove();
-        toDoManager.removeToDoItem(toDo);
     })
 }
 

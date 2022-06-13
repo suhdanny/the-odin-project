@@ -29,8 +29,6 @@ let toDoManager = (function() {
 
     return {
         addToDoItem,
-        removeToDoItem,
-        renderHome,
         renderToDo
     }
 })();
