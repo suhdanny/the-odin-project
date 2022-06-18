@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root {
+    --dark-blue: #1d2f42;
+    --dark-yellow: #ffad74;
+    --dark-green: #162f2d;
+    --light-blue: #8fc3cf;
+    --light-yellow: #ffdcaa;
+    --light-green: #4e7774;
+    --light-red: rgb(237, 97, 11);
+    --light-grey: #bdbdbd;
+    --card-background: #0a121a1a;
+    --white: #ececec;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Quicksand, sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--white);
+}
+
+.header {
+    font-size: 4em;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon .fa-meteor {
+    font-size: 1em;
+    color: var(--light-yellow);
+}
+
+.location {
+    font-size: 2em;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.search input[type='text'] {
+    --webkit-appearance: none;
+    appearance: none;
+    width: 250px;
+    height: 30px;
+    border: none;
+    border-bottom: 3px solid var(--light-yellow);
+    background-color: transparent;
+    font-size: 2em;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.search-bar .search .icon {
+    font-size: 1.8em;
+    color: var(--white);
+}
+
+#search:focus {
+    outline: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 60vh;
+    width: 60vw;
+    gap: 1em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.3em;
+    padding: .5em;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: var(--card-background);
+}
+
+.card.main {
+    border-left: 10px solid var(--light-green);
+}
+
+.temp .current-temp {
+    color: var(--light-yellow);
+    margin-right: 20px;
+}
+
+.temp span:nth-child(2), .temp span:nth-child(3) {
+    font-size: .7em;
+}
+
+.temp .icon .fa-temperature-empty {
+    color: var(--light-blue);
+}
+
+.temp span .feel-temp {
+    background-color: var(--light-blue);
+    border-radius: 10px;
+    color: black;
+    padding: .2em;
+}
+
+.btn {
+    font-family: inherit;
+    font-weight: inherit;
+    background-color: var(--light-yellow);
+    border-radius: 10px;
+    font-size: 25px;
+    padding: .5em;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    border: none;
+}
+
+.btn:hover {
+    filter: brightness(.8);
+}
+
+.metric {
+    background-color: var(--light-blue);
+    color: black;
+    border-radius: 10px;
+    padding: .2em;
+    font-size: .8em;
+}
+
+.icon {
+    margin-right: 15px;
+}
+
+.description .icon {
+    color: var(--dark-yellow);
+}
+
+.btn .icon {
+    color: var(--light-blue);
+}
+
+.sunrise .icon {
+    color: var(--light-red);
+}
+
+.sunset .icon {
+    color: var(--light-yellow);
+}
+
+.day-length .icon {
+    color: var(--light-grey);
+}
+
+.pressure .icon {
+    color: var(--light-grey);
+}
+
+.humidity .icon {
+    color: var(--light-blue);
+}
+
+.cloudiness .icon {
+    color: var(--light-grey);
+}
+
+.speed .icon {
+    color: var(--light-blue);
+}
+
+.direction .icon {
+    color: var(--light-yellow);
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/9bf03ca4e6.js" crossorigin="anonymous"></script>
+    <title>Weather Application</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <span class="icon"><i class="fa-solid fa-meteor"></i></span>
+            <span class="title">OpenWeather</span>
+        </div>
+    </div>
+    <div class="search-bar">
+        <div class="search">
+            <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" placeholder="" id="search">
+        </div>
+    </div>
+    <div class="location">
+        <div class="city"></div>
+        <div class="date"></div>
+    </div>
+    <div class="grid-container">
+        <div class="card main">
+            <div class="temp">
+                <span class="current-temp"></span>
+                <span class="icon"><i class="fa-solid fa-temperature-empty"></i></span>
+                <span>Feels like <span class="feel-temp"></span></span>
+            </div>
+            <div class="description">
+                <span class="icon"><i class="fa-solid fa-circle-info"></i></span>
+                <span id="description"></span>
+            </div>
+            <button class="btn">
+                <span class="icon"><i class="fa-solid fa-rotate"></i></span>
+                Check in <span class="unit">°F</span>
+            </button>
+        </div>
+        <div class="card time">
+            <div class="sunrise">
+                <span class="icon"><i class="fa-regular fa-sun"></i></span>Sunrise <span class="metric" id="sunrise"></span>
+            </div>
+            <div class="sunset">
+                <span class="icon"><i class="fa-regular fa-moon"></i></span>Sunset <span class="metric" id="sunset"></span>
+            </div>
+            <div class="day-length">
+                <span class="icon"><i class="fa-regular fa-clock"></i></span>Day Length <span class="metric" id="day-length"></span>
+            </div>
+        </div>
+        <div class="card atmosphere">
+            <div class="pressure">
+                <span class="icon"><i class="fa-solid fa-gauge-simple-high"></i></span>Pressure <span class="metric" id="pressure"></span>
+            </div>
+            <div class="humidity">
+                <span class="icon"><i class="fa-solid fa-droplet"></i></span>Humidity <span class="metric" id="humidity"></span>
+            </div>
+            <div class="visibility">
+                <span class="icon"><i class="fa-solid fa-eye"></i></span>Visibility <span class="metric" id="visibility"></span>
+            </div>
+        </div>
+        <div class="card cloud">
+            <div class="cloudiness">
+                <span class="icon"><i class="fa-solid fa-cloud"></i></span>Cloudiness <span class="metric" id="cloudiness"></span>
+            </div>
+            <div class="speed">
+                <span class="icon"><i class="fa-solid fa-wind"></i></span>Wind Speed <span class="metric" id="speed"></span>
+            </div>
+            <div class="direction">
+                <span class="icon"><i class="fa-solid fa-location-arrow"></i></span>Wind Direction <span class="metric" id="direction"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
