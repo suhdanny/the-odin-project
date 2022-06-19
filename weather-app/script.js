@@ -87,9 +87,7 @@ const Manager = (function() {
 
     const convertUTCtoTime = sec => new Date(sec * 1000).toLocaleTimeString();
 
-    const convertUTCtoString = sec => {
-        new Date(sec * 1000).toDateString()
-    };
+    const convertUTCtoString = sec => new Date(sec * 1000).toDateString();
 
     const calculateDayLength = (sunriseUTC, sunsetUTC) => {
         const date1 = new Date(sunriseUTC * 1000);
