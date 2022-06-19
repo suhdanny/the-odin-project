@@ -2,7 +2,7 @@
 
 This web application uses the Open Weather API to display weather information of any city worldwide. The information includes temperature, weather description, sunrise and sunset time, day duration, pressure, cloudiness, etc. The user also has an ability to toggle between displaying temperature as Celsius or Fahrenheit as well as wind speed as meters/second or miles/hour.
 
-## Demo[https://openweatherapi-donghyun.netlify.app/]
+## [Demo](https://openweatherapi-donghyun.netlify.app/)
 
 ## Reflection
 
