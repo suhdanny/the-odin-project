@@ -16,3 +16,4 @@ Below I provided a table which provides direct link to the project repository an
 | 06  | [Library](../master/library-project)               | [Link](https://library-project-donghyunsuh.netlify.app/)      |
 | 07  | [Tic Tac Toe](../master/tic-tac-toe)               | [Link](https://tictactoe-donghyunsuh.netlify.app/)            |
 | 08  | [Restaurant](../master/restaurant)                 | [Link](https://restaurant-kinsushi.netlify.app/)              |
+| 09  | [Weather App](../master/weather-app)               | [Link](https://openweatherapi-donghyun.netlify.app/)          |
