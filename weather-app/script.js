@@ -74,8 +74,8 @@ const Manager = (function() {
         description.textContent = obj.description;
         currentTemp.textContent = `${obj.temp}${measurement}`;
         feelTemp.textContent = `${obj.feels_like}${measurement}`;
-        sunrise.textContent = `${obj.sunrise}`;
-        sunset.textContent = `${obj.sunset}`;
+        sunrise.textContent = `${obj.sunrise} (EST)`;
+        sunset.textContent = `${obj.sunset} (EST)`;
         dayLength.textContent = `${obj.day_length}hr`;
         pressure.textContent = `${obj.pressure}hPa`;
         humidity.textContent = `${obj.humidity}%`;
@@ -87,7 +87,9 @@ const Manager = (function() {
 
     const convertUTCtoTime = sec => new Date(sec * 1000).toLocaleTimeString();
 
-    const convertUTCtoString = sec => new Date(sec * 1000).toDateString();
+    const convertUTCtoString = sec => {
+        new Date(sec * 1000).toDateString()
+    };
 
     const calculateDayLength = (sunriseUTC, sunsetUTC) => {
         const date1 = new Date(sunriseUTC * 1000);
@@ -108,6 +110,7 @@ const Manager = (function() {
     }
 
     return {
+        fetchWeatherJSON,
         getIsCelsius,
         updatePage,
         switchUnit,
