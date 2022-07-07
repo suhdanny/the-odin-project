@@ -9,7 +9,7 @@ function Main() {
 	const [pokemons, setPokemons] = useState([]);
 	const [clickedPokemons, setClickedPokemons] = useState([]);
 	const [currentScore, setCurrentScore] = useState(0);
-	const [bestScore, setBestScore] = useState(0);
+	const [bestScore, setBestScore] = useState(parseInt(localStorage.getItem('bestScore')) || 0);
 
 	useEffect(() => {
 		async function getPokemons() {
@@ -43,6 +43,7 @@ function Main() {
 	function handleClick(id) {
 		if (clickedPokemons.includes(id)) {
 			if (currentScore > bestScore) {
+				localStorage.setItem('bestScore', currentScore);
 				setBestScore(currentScore);
 			}
 			setCurrentScore(0);
