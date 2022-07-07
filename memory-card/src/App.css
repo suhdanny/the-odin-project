@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -38,4 +40,46 @@
     border-radius: 50%;
     background-color: white;
     border: 3px solid black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    padding: 60px;
+}
+
+.card {
+    font-family: "Press Start 2P", sans-serif;
+    width: 180px;
+    height: 200px;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 10px;
+    transition: 0.1s ease-in;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card--image {
+    width: 120px;
+}
+
+.card--name {
+    color: yellow;
+    text-transform: uppercase;
 }
