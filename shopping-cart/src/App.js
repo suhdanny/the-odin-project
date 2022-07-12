@@ -7,7 +7,7 @@ import Cart from './pages/Cart';
 
 const App = () => {
 	return (
-		<div className='font-sans'>
+		<div className='font-sans px-60 py-8'>
 			<Header />
 			<Routes>
 				<Route exact path='/' element={<Home />} />

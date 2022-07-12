@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from '../Context';
+import Item from '../components/Item';
 
 function Shop() {
-	return (
-		<div>
-			<h1>Shop</h1>
-		</div>
-	);
+	const { allItems } = useContext(Context);
+
+	const items = allItems.map(item => {
+		return <Item key={item.id} item={item} />;
+	});
+
+	console.log(allItems);
+
+	return <div className='grid grid-cols-3 mt-4'>{items}</div>;
 }
 
 export default Shop;

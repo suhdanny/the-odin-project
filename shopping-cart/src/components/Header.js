@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 function Header() {
 	return (
 		<header>
-			<ul className='flex justify-around items-center py-4'>
+			<ul className='flex items-center py-4 w-full'>
 				<Link to='/'>
 					<li className='uppercase font-bold text-4xl cursor-pointer'>Fashion.</li>
 				</Link>
-				<div className='flex gap-7 text-xl items-center'>
+				<div className='flex gap-7 text-xl items-center ml-auto'>
 					<Link to='/shop'>
 						<li className='cursor-pointer'>
 							<AiOutlineShopping size={30} />
