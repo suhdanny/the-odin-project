@@ -3,7 +3,8 @@ import React, { useState, useEffect, createContext } from 'react';
 const Context = createContext();
 
 function ContextProvider({ children }) {
-	const [allItems, setAllItems] = useState();
+	const [allItems, setAllItems] = useState([]);
+	const [cartItems, setCartItems] = useState([]);
 	const url = 'https://fakestoreapi.com/products';
 
 	useEffect(() => {
@@ -21,10 +22,18 @@ function ContextProvider({ children }) {
 		});
 	}
 
+	function addToCart(newItem) {
+		setCartItems(prev => {
+			return [...prev, newItem];
+		});
+	}
+
 	return (
 		<Context.Provider
 			value={{
 				allItems,
+				cartItems,
+				addToCart,
 			}}>
 			{children}
 		</Context.Provider>

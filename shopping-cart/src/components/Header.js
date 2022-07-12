@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from '../Context';
 import { AiOutlineUser, AiOutlineShopping, AiOutlineShoppingCart } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 function Header() {
+	const { cartItems } = useContext(Context);
+
 	return (
 		<header>
 			<ul className='flex items-center py-4 w-full'>
@@ -17,9 +20,11 @@ function Header() {
 					</Link>
 					<Link to='/cart'>
 						<li className='cursor-pointer relative'>
-							<div className='absolute -top-4 -right-5 bg-black text-white rounded-full w-6 h-6 flex justify-center items-center'>
-								1
-							</div>
+							{cartItems.length > 0 && (
+								<div className='absolute -top-4 -right-5 bg-black text-white rounded-full w-6 h-6 flex justify-center items-center'>
+									{cartItems.length}
+								</div>
+							)}
 							<AiOutlineShoppingCart size={40} />
 						</li>
 					</Link>
