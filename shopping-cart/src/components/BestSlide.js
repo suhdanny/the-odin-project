@@ -2,6 +2,7 @@ import React from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
+import { BestImage } from './BestImage';
 
 function BestSlide() {
 	const settings = {
@@ -27,17 +28,6 @@ function BestSlide() {
 			<BestImage id={9} />
 			<BestImage id={10} />
 		</Slider>
-	);
-}
-
-function BestImage({ id }) {
-	return (
-		<div
-			key={id}
-			className='bg-contain bg-no-repeat bg-center relative m-5'
-			style={{ backgroundImage: `url(images/best-${id}.jpeg)`, height: 300 }}>
-			<h1 className='absolute left-12 top-3 text-3xl text-red-400 font-bold'>{id}</h1>
-		</div>
 	);
 }
 

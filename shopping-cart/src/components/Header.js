@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Context } from '../Context';
-import { AiOutlineUser, AiOutlineShopping, AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiOutlineHome, AiOutlineUser, AiOutlineShopping, AiOutlineShoppingCart } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 function Header() {
@@ -13,6 +13,11 @@ function Header() {
 					<li className='uppercase font-bold text-4xl cursor-pointer'>Fashion.</li>
 				</Link>
 				<div className='flex gap-8 text-xl items-center ml-auto'>
+					<Link to='/'>
+						<li className='cursor-pointer'>
+							<AiOutlineHome size={40} />
+						</li>
+					</Link>
 					<Link to='/shop'>
 						<li className='cursor-pointer'>
 							<AiOutlineShopping size={40} />
@@ -28,11 +33,11 @@ function Header() {
 							<AiOutlineShoppingCart size={40} />
 						</li>
 					</Link>
-					<Link to='/'>
+					{/* <Link to='/'>
 						<li className='cursor-pointer'>
 							<AiOutlineUser size={40} />
 						</li>
-					</Link>
+					</Link> */}
 				</div>
 			</ul>
 		</header>
