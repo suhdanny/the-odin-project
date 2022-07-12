@@ -28,12 +28,19 @@ function ContextProvider({ children }) {
 		});
 	}
 
+	function removeFromCart(id) {
+		setCartItems(prev => {
+			return prev.filter(item => item.id !== id);
+		});
+	}
+
 	return (
 		<Context.Provider
 			value={{
 				allItems,
 				cartItems,
 				addToCart,
+				removeFromCart,
 			}}>
 			{children}
 		</Context.Provider>
