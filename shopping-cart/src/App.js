@@ -4,8 +4,8 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Cart from './pages/Cart';
-import Footer from './components/Footer';
 import ScrollTop from './ScrollTop';
+import FooterUI from './components/FooterUI';
 
 const App = () => {
 	return (
@@ -18,7 +18,7 @@ const App = () => {
 					<Route path='/cart' element={<Cart />} />
 				</Routes>
 			</ScrollTop>
-			<Footer />
+			<FooterUI />
 		</div>
 	);
 };

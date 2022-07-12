@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Context } from '../Context';
-import { AiOutlineHome, AiOutlineUser, AiOutlineShopping, AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiOutlineHome, AiOutlineShopping, AiOutlineShoppingCart } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 function Header() {
@@ -33,11 +33,6 @@ function Header() {
 							<AiOutlineShoppingCart size={40} />
 						</li>
 					</Link>
-					{/* <Link to='/'>
-						<li className='cursor-pointer'>
-							<AiOutlineUser size={40} />
-						</li>
-					</Link> */}
 				</div>
 			</ul>
 		</header>
