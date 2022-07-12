@@ -36,7 +36,7 @@ function BestImage({ id }) {
 			key={id}
 			className='bg-contain bg-no-repeat bg-center relative m-5'
 			style={{ backgroundImage: `url(images/best-${id}.jpeg)`, height: 300 }}>
-			<h1 className='absolute left-12 top-3 text-3xl text-red-300 font-bold'>{id}</h1>
+			<h1 className='absolute left-12 top-3 text-3xl text-red-400 font-bold'>{id}</h1>
 		</div>
 	);
 }
