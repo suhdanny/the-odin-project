@@ -11,7 +11,7 @@ function Shop() {
 
 	console.log(allItems);
 
-	return <div className='grid grid-cols-3 mt-4'>{items}</div>;
+	return <div className='grid grid-cols-3 mt-5'>{items}</div>;
 }
 
 export default Shop;

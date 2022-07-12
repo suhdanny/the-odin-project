@@ -9,20 +9,23 @@ function Header() {
 				<Link to='/'>
 					<li className='uppercase font-bold text-4xl cursor-pointer'>Fashion.</li>
 				</Link>
-				<div className='flex gap-7 text-xl items-center ml-auto'>
+				<div className='flex gap-8 text-xl items-center ml-auto'>
 					<Link to='/shop'>
 						<li className='cursor-pointer'>
-							<AiOutlineShopping size={30} />
+							<AiOutlineShopping size={40} />
 						</li>
 					</Link>
 					<Link to='/cart'>
-						<li className='cursor-pointer'>
-							<AiOutlineShoppingCart size={30} />
+						<li className='cursor-pointer relative'>
+							<div className='absolute -top-4 -right-5 bg-black text-white rounded-full w-6 h-6 flex justify-center items-center'>
+								1
+							</div>
+							<AiOutlineShoppingCart size={40} />
 						</li>
 					</Link>
 					<Link to='/'>
 						<li className='cursor-pointer'>
-							<AiOutlineUser size={30} />
+							<AiOutlineUser size={40} />
 						</li>
 					</Link>
 				</div>
