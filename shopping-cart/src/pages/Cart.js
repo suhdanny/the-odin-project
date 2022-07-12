@@ -1,13 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Context } from '../Context';
 import CartItem from '../components/CartItem';
 
 function Cart() {
-	const { cartItems } = useContext(Context);
+	const { cartItems, emptyCart } = useContext(Context);
+	const [buttonText, setButtonText] = useState('Check out');
 	const price = cartItems.reduce(getSum, 0);
 
 	function getSum(total, item) {
 		return total + item.price;
+	}
+
+	function placeOrder() {
+		setButtonText('Processing ...');
+		setTimeout(() => {
+			emptyCart();
+			alert('Your order has been processed!');
+			setButtonText('Check out');
+		}, 3000);
 	}
 
 	const cartElements = cartItems.map(item => {
@@ -31,9 +41,11 @@ function Cart() {
 						Shipping <span className='float-right'>$10</span>
 					</div>
 					<div className='font-bold'>
-						Total <span className='float-right'>{price + 10}</span>
+						Total <span className='float-right'>${price + 10}</span>
 					</div>
-					<button className='font-bold text-white bg-black rounded-md px-10 py-2'>Check out</button>
+					<button onClick={placeOrder} disabled={!cartItems.length > 0} className='font-bold text-white bg-black rounded-md px-10 py-2'>
+						{buttonText}
+					</button>
 				</div>
 			</div>
 		</main>

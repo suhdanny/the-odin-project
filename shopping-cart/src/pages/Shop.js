@@ -9,8 +9,6 @@ function Shop() {
 		return <Item key={item.id} item={item} />;
 	});
 
-	console.log(allItems);
-
 	return <div className='grid grid-cols-3 mt-5'>{items}</div>;
 }
 
