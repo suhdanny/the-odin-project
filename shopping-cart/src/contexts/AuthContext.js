@@ -9,13 +9,21 @@ export function useAuth() {
 
 export function AuthProvider({ children }) {
 	const [currentUser, setCurrentUser] = useState();
+	const [loggedIn, setLoggedIn] = useState(false);
 
 	function signup(email, password) {
+		setLoggedIn(true);
 		return auth.createUserWithEmailAndPassword(email, password);
 	}
 
 	function login(email, password) {
+		setLoggedIn(true);
 		return auth.signInWithEmailAndPassword(email, password);
+	}
+
+	function logout() {
+		setLoggedIn(false);
+		return auth.signOut();
 	}
 
 	useEffect(() => {
@@ -27,6 +35,8 @@ export function AuthProvider({ children }) {
 		currentUser,
 		signup,
 		login,
+		logout,
+		loggedIn,
 	};
 
 	return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
