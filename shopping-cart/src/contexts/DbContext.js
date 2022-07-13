@@ -9,12 +9,12 @@ export function useDb() {
 }
 
 export function DbProvider({ children }) {
-	function addItem(key, value) {
+	function addItemToDb(key, value) {
 		return addDoc(collection(db, key), value);
 	}
 
 	const value = {
-		addItem,
+		addItemToDb,
 	};
 
 	return <DbContext.Provider value={value}>{children}</DbContext.Provider>;

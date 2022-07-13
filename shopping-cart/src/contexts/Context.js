@@ -11,7 +11,10 @@ function ContextProvider({ children }) {
 		async function fetchData() {
 			const res = await fetch(url);
 			const data = await res.json();
-			setAllItems(filterData(data));
+			const items = data.map(item => {
+				return { ...item, isFavorite: false };
+			});
+			setAllItems(filterData(items));
 		}
 		fetchData();
 	}, []);
@@ -20,6 +23,16 @@ function ContextProvider({ children }) {
 		return arr.filter(item => {
 			return item.category === "men's clothing" || item.category === "women's clothing";
 		});
+	}
+
+	function toggleFavorite(id) {
+		const updatedItems = allItems.map(item => {
+			if (item.id === id) {
+				return { ...item, isFavorite: !item.isFavorite };
+			}
+			return item;
+		});
+		setAllItems(updatedItems);
 	}
 
 	function addToCart(newItem) {
@@ -46,6 +59,7 @@ function ContextProvider({ children }) {
 				addToCart,
 				removeFromCart,
 				emptyCart,
+				toggleFavorite,
 			}}>
 			{children}
 		</Context.Provider>
