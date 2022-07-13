@@ -44,7 +44,7 @@ function Login() {
 				</Button>
 			</div>
 			<p className='mt-3 text-center'>
-				Need an account?{' '}
+				New to Fashion?{' '}
 				<Link to='/sign-up'>
 					<span className='text-blue-500 underline'>Sign Up</span>
 				</Link>

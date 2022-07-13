@@ -8,6 +8,7 @@ import ScrollTop from './ScrollTop';
 import FooterUI from './components/FooterUI';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import Welcome from './pages/Welcome';
 
 const App = () => {
 	return (
@@ -20,6 +21,7 @@ const App = () => {
 					<Route path='/cart' element={<Cart />} />
 					<Route path='/sign-up' element={<Signup />} />
 					<Route path='/log-in' element={<Login />} />
+					<Route path='/welcome' element={<Welcome />} />
 				</Routes>
 			</ScrollTop>
 			<FooterUI />
