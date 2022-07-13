@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Input, Button, Alert } from 'react-daisyui';
 import { useAuth } from '../contexts/AuthContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Signup() {
 	const emailRef = useRef(null);
@@ -9,7 +9,7 @@ function Signup() {
 	const passwordConfirmRef = useRef(null);
 	const [error, setError] = useState('');
 	const [loading, setLoading] = useState(false);
-
+	const navigate = useNavigate();
 	const { signup } = useAuth();
 
 	async function handleSubmit(e) {
@@ -23,6 +23,7 @@ function Signup() {
 			setError('');
 			setLoading(true);
 			await signup(emailRef.current.value, passwordRef.current.value);
+			navigate('/');
 		} catch {
 			setError('Failed to create an account');
 		}
@@ -33,6 +34,7 @@ function Signup() {
 	return (
 		<div className='flex flex-col w-full component-preview p-4 items-center justify-center gap-2 font-sans'>
 			<div className='form-control w-full max-w-xs'>
+				<h1 className='text-center text-xl uppercase font-bold mb-2'>Sign Up</h1>
 				{error && <Alert className='bg-error text-white p-2 mb-2'>{error}</Alert>}
 				<label className='label'>
 					<span className='label-text'>Email</span>
