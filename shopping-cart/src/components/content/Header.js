@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { Context } from '../contexts/Context';
+import { Context } from '../../contexts/Context';
 import { AiOutlineHome, AiOutlineShopping, AiOutlineShoppingCart, AiOutlineUser } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../../contexts/AuthContext';
 import { Dropdown, Button, Card } from 'react-daisyui';
 
 function Header() {
@@ -51,7 +51,7 @@ function Header() {
 								<Dropdown.Menu className='card card-compact w-72 p-2 shadow bg-neutral-content text-neural m-1'>
 									<Card.Body>
 										<Card.Title tag={'h4'} className='text-sm'>
-											{currentUser && currentUser.email}
+											{currentUser && currentUser.emailxw}
 										</Card.Title>
 										<Card.Actions className='flex flex-col cursor-pointer text-sm gap-4 mt-2'>
 											<div>My Orders</div>

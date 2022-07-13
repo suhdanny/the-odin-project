@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Context } from '../contexts/Context';
+import { Context } from '../../contexts/Context';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 
 function Item({ item }) {

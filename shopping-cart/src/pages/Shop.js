@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Context } from '../contexts/Context';
-import Item from '../components/Item';
+import Item from '../components/content/Item';
 
 function Shop() {
 	const { allItems } = useContext(Context);

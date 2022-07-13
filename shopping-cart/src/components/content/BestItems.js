@@ -1,5 +1,5 @@
 import React from 'react';
-import BestSlide from '../components/BestSlide';
+import BestSlide from './BestSlide';
 import { Link } from 'react-router-dom';
 
 export function BestItems() {

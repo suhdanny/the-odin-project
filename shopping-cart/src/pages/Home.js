@@ -1,6 +1,6 @@
 import React from 'react';
-import Slide from '../components/Slide';
-import { BestItems } from '../components/BestItems';
+import Slide from '../components/content/Slide';
+import { BestItems } from '../components/content/BestItems';
 
 function Home() {
 	return (

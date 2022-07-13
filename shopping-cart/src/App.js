@@ -1,14 +1,14 @@
 import React from 'react';
-import Header from './components/Header';
+import Header from './components/content/Header';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Cart from './pages/Cart';
-import ScrollTop from './ScrollTop';
-import FooterUI from './components/FooterUI';
-import Signup from './pages/Signup';
-import Login from './pages/Login';
-import Welcome from './pages/Welcome';
+import ScrollTop from './components/utils/ScrollTop';
+import FooterUI from './components/content/FooterUI';
+import Signup from './components/authentication/Signup';
+import Login from './components/authentication/Login';
+import Welcome from './components/authentication/Welcome';
 
 const App = () => {
 	return (
