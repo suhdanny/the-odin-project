@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { ContextProvider } from './contexts/Context';
 import { AuthProvider } from './contexts/AuthContext';
+import { DbProvider } from './contexts/DbContext';
 
 import './index.css';
 import App from './App';
@@ -12,9 +13,11 @@ root.render(
 	<React.StrictMode>
 		<ContextProvider>
 			<AuthProvider>
-				<BrowserRouter>
-					<App />
-				</BrowserRouter>
+				<DbProvider>
+					<BrowserRouter>
+						<App />
+					</BrowserRouter>
+				</DbProvider>
 			</AuthProvider>
 		</ContextProvider>
 	</React.StrictMode>
