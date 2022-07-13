@@ -6,6 +6,7 @@ import Shop from './pages/Shop';
 import Cart from './pages/Cart';
 import ScrollTop from './ScrollTop';
 import FooterUI from './components/FooterUI';
+import Signup from './pages/Signup';
 
 const App = () => {
 	return (
@@ -16,6 +17,7 @@ const App = () => {
 					<Route exact path='/' element={<Home />} />
 					<Route path='/shop' element={<Shop />} />
 					<Route path='/cart' element={<Cart />} />
+					<Route path='/sign-up' element={<Signup />} />
 				</Routes>
 			</ScrollTop>
 			<FooterUI />

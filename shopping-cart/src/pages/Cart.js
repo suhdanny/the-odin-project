@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Context } from '../Context';
+import { Context } from '../contexts/Context';
 import CartItem from '../components/CartItem';
 
 function Cart() {
