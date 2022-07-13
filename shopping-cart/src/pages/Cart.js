@@ -25,7 +25,7 @@ function Cart() {
 	});
 
 	return (
-		<main className='flex flex-col items-center mt-5 gap-7'>
+		<main className='flex flex-col items-center gap-7'>
 			<div className='font-bold text-3xl'>Cart</div>
 			<div className='flex w-full'>
 				<div className='w-9/12 flex flex-col px-10 gap-10'>
