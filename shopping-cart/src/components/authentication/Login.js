@@ -1,7 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useContext } from 'react';
 import { Input, Button, Alert } from 'react-daisyui';
 import { useAuth } from '../../contexts/AuthContext';
+import { useDb } from '../../contexts/DbContext';
 import { Link, useNavigate } from 'react-router-dom';
+import { Context } from '../../contexts/Context';
 
 function Login() {
 	const emailRef = useRef(null);
@@ -9,7 +11,9 @@ function Login() {
 	const [error, setError] = useState('');
 	const [loading, setLoading] = useState(false);
 	const navigate = useNavigate();
+	const { setAllItems, setCartItems } = useContext(Context);
 	const { login } = useAuth();
+	const { getItemFromDb } = useDb();
 
 	async function handleSubmit(e) {
 		e.preventDefault();
@@ -18,6 +22,8 @@ function Login() {
 			setError('');
 			setLoading(true);
 			await login(emailRef.current.value, passwordRef.current.value);
+			getItemFromDb(emailRef.current.value, 'cart').then(data => setCartItems(data.cartItems));
+			getItemFromDb(emailRef.current.value, 'shop').then(data => setAllItems(data.allItems));
 			navigate('/');
 		} catch {
 			setError('Failed to Log In');

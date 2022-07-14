@@ -1,12 +1,10 @@
 import React, { useState, useContext } from 'react';
 import { Context } from '../../contexts/Context';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
-import { useDb } from '../../contexts/DbContext';
 
 function Item({ item }) {
 	const { addToCart, toggleFavorite } = useContext(Context);
 	const [hovered, setHovered] = useState(false);
-	const { addItemToDb } = useDb();
 
 	function heartIcon() {
 		if (!item.isFavorite) {
@@ -30,16 +28,6 @@ function Item({ item }) {
 		}
 	}
 
-	function handleClick() {
-		addToCart(item);
-
-		// try {
-		// 	addItemToDb('cart', item);
-		// } catch {
-		// 	console.log('Could not add item to DB');
-		// }
-	}
-
 	return (
 		<div
 			className='flex flex-col justify-center items-center gap-4 rounded-lg p-8 relative'
@@ -49,7 +37,7 @@ function Item({ item }) {
 			<img className='h-60' src={item.image} alt={'product'} />
 			<div className='font-bold text-center'>{item.title}</div>
 			<div className='font-bold'>${item.price}</div>
-			<button className='cursor-pointer capitalize bg-black text-white p-4 rounded-lg' onClick={handleClick}>
+			<button className='cursor-pointer capitalize bg-black text-white p-4 rounded-lg' onClick={() => addToCart(item)}>
 				add to cart
 			</button>
 		</div>

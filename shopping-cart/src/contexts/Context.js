@@ -35,6 +35,16 @@ function ContextProvider({ children }) {
 		setAllItems(updatedItems);
 	}
 
+	function removeAllFavorite() {
+		const removedItems = allItems.map(item => {
+			if (item.isFavorite) {
+				return { ...item, isFavorite: false };
+			}
+			return item;
+		});
+		setAllItems(removedItems);
+	}
+
 	function addToCart(newItem) {
 		setCartItems(prev => {
 			return [...prev, newItem];
@@ -54,12 +64,15 @@ function ContextProvider({ children }) {
 	return (
 		<Context.Provider
 			value={{
+				setAllItems,
+				setCartItems,
 				allItems,
 				cartItems,
 				addToCart,
 				removeFromCart,
 				emptyCart,
 				toggleFavorite,
+				removeAllFavorite,
 			}}>
 			{children}
 		</Context.Provider>
