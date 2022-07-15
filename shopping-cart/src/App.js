@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Cart from './pages/Cart';
 import ScrollTop from './components/utils/ScrollTop';
-import FooterUI from './pages/FooterUI';
+import { FooterUI } from './pages/Footer';
 import Signup from './components/authentication/Signup';
 import Login from './components/authentication/Login';
 import Welcome from './components/authentication/Welcome';
