@@ -17,7 +17,7 @@ This single-page application was built with React, Tailwind + DaisyUI, and Fireb
 -   Provides user authentication and data storage using Firebase
 -   Users can log-in with their existing account to access stored items in their cart as well as their favorite items they have saved when they logged out last time
 
-## [Demo]()
+## [Demo](https://shopping-cart-e268f.web.app/)
 
 ## Challenges
 
