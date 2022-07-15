@@ -13,7 +13,7 @@ Below I provided a table which provides direct link to the project repository an
 | 01  | [Memory Card Game](../master/memory-card) | [Link](https://pokemon-memory-card-donghyunsuh.netlify.app) |
 | 02  | [Etch-A-Sketch](../master/shopping-cart)  | [Link](https://shopping-cart-e268f.web.app/)                |
 
-### HTML & CSS & JavaScript Projects
+### Vanilla JavaScript Projects
 
 | #   | Projects                                           | Live Demo                                                     |
 | --- | -------------------------------------------------- | ------------------------------------------------------------- |
