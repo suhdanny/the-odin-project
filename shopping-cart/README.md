@@ -1,6 +1,6 @@
 # Fashion E-Commerce Website
 
-This single-page application was built with React, Tailwind + DaisyUI, and Firebase.
+This single-page application was built with React, FakeStore API, Tailwind + DaisyUI, and Firebase.
 
 ## Features
 
@@ -20,13 +20,13 @@ This single-page application was built with React, Tailwind + DaisyUI, and Fireb
 ## [Demo](https://shopping-cart-e268f.web.app/)
 
 #### Home Page
+
 <img width="1226" alt="Screen Shot 2022-07-15 at 12 55 30 AM" src="https://user-images.githubusercontent.com/79773846/179153744-486e3098-1a08-4f59-a1ad-9a7fdeee681e.png">
 <img width="1218" alt="Screen Shot 2022-07-15 at 12 55 41 AM" src="https://user-images.githubusercontent.com/79773846/179153762-19448380-0b77-4917-a81a-77a55e6632f1.png">
 
 #### Shop Page
 
 <img width="1288" alt="Screen Shot 2022-07-15 at 12 56 00 AM" src="https://user-images.githubusercontent.com/79773846/179153814-6aeb3699-a901-45f6-a931-032822cc5b4f.png">
-
 
 #### Cart Page
 
@@ -36,7 +36,6 @@ This single-page application was built with React, Tailwind + DaisyUI, and Fireb
 
 <img width="1259" alt="Screen Shot 2022-07-15 at 12 56 45 AM" src="https://user-images.githubusercontent.com/79773846/179153904-90d7ea92-c3ab-46d7-936f-1b12a83ea83d.png">
 <img width="1224" alt="Screen Shot 2022-07-15 at 12 56 58 AM" src="https://user-images.githubusercontent.com/79773846/179153916-9e4dc23e-3f11-4c33-ba84-b20a4e8bf711.png">
-
 
 ## Challenges
 
