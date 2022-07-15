@@ -28,12 +28,12 @@ function Header() {
 				<div className='flex text-xl items-center ml-auto'>
 					<Link to='/'>
 						<Button color='ghost'>
-							<AiOutlineHome size={40} />
+							<AiOutlineHome size={40} data-testid='home-icon' />
 						</Button>
 					</Link>
 					<Link to='/shop'>
 						<Button color='ghost'>
-							<AiOutlineShopping size={40} />
+							<AiOutlineShopping size={40} data-testid='shop-icon' />
 						</Button>
 					</Link>
 					<Link to='/cart'>
@@ -43,13 +43,13 @@ function Header() {
 									{cartItems.length}
 								</div>
 							)}
-							<AiOutlineShoppingCart size={40} />
+							<AiOutlineShoppingCart size={40} data-testid='cart-icon' />
 						</Button>
 					</Link>
 					{!loggedIn ? (
 						<Link to='/sign-up'>
 							<Button color='ghost'>
-								<AiOutlineUser size={40} />
+								<AiOutlineUser size={40} data-testid='user-icon' />
 							</Button>
 						</Link>
 					) : (
