@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { Context } from '../../contexts/Context';
+import { Context } from '../contexts/Context';
 import { AiOutlineHome, AiOutlineShopping, AiOutlineShoppingCart, AiOutlineUser } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../contexts/AuthContext';
 import { Dropdown, Button, Card } from 'react-daisyui';
-import { useDb } from '../../contexts/DbContext';
+import { useDb } from '../contexts/DbContext';
 
 function Header() {
 	const { cartItems, allItems, emptyCart, removeAllFavorite } = useContext(Context);
