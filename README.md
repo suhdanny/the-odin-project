@@ -6,6 +6,15 @@ Below I provided a table which provides direct link to the project repository an
 
 ## Relevant Links
 
+### React Projects
+
+| #   | Projects                                  | Live Demo                                                   |
+| --- | ----------------------------------------- | ----------------------------------------------------------- |
+| 01  | [Memory Card Game](../master/memory-card) | [Link](https://pokemon-memory-card-donghyunsuh.netlify.app) |
+| 02  | [Etch-A-Sketch](../master/shopping-cart)  | [Link](https://shopping-cart-e268f.web.app/)                |
+
+### HTML & CSS & JavaScript Projects
+
 | #   | Projects                                           | Live Demo                                                     |
 | --- | -------------------------------------------------- | ------------------------------------------------------------- |
 | 01  | [Rock Paper Scissor](../master/rock-paper-scissor) | [Link](https://rockpaperscissors-donhgyunsuh.netlify.app/)    |
@@ -17,4 +26,3 @@ Below I provided a table which provides direct link to the project repository an
 | 07  | [Tic Tac Toe](../master/tic-tac-toe)               | [Link](https://tictactoe-donghyunsuh.netlify.app/)            |
 | 08  | [Restaurant](../master/restaurant)                 | [Link](https://restaurant-kinsushi.netlify.app/)              |
 | 09  | [Weather App](../master/weather-app)               | [Link](https://openweatherapi-donghyun.netlify.app/)          |
-| 10  | [Memory Card Game](../master/memory-card)          | [Link](https://pokemon-memory-card-donghyunsuh.netlify.app)   |
